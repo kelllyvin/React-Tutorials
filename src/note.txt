@@ -1,0 +1,5 @@
+create a componet called LastViewed
+const lastViewedproduct =[
+    {id,image, price}
+]
+use the Mystoresingleproduct componet
