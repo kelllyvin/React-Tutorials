@@ -10,3 +10,6 @@
 .section{
     background-color: black;
 }
+.mybtn{ 
+    @apply w-[120px] h-[40px] bg-black text-white rounded-[7px] text-lg cursor-pointer;
+}

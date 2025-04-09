@@ -10,6 +10,11 @@ import Simplelist from "./Components/Simplelist"
 import Complexlist from "./Components/Complexlist";
 import Mystore from "./Components/Mystore";
 import Lastviwed from "./Components/Lastviwed";
+import Propschildren from "./Propschildren";
+import Eventhandeling from "../Eventhandeling";
+import Conditionalrendring from "./Components/Conditionalrendring";
+import Simplestate from "./Components/Simplestate";
+import User from "./Components/User";
 function App() {
   return (
     <>
@@ -18,8 +23,13 @@ function App() {
     {/* <Jumiaclone /> */}
     {/* <Simplelist /> */}
     {/* <Complexlist /> */}
-    <Mystore />
-    <Lastviwed />
+    {/* <Mystore />
+    <Lastviwed /> */}
+    {/* <Propschildren /> */}
+    {/* <Eventhandeling /> */}
+    {/* <Conditionalrendring /> */}
+    {/* <Simplestate /> */}
+    <User />
     
     </>
   );
