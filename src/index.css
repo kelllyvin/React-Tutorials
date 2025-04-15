@@ -3,7 +3,7 @@
     @apply max-w-[1200px] mx-auto px-2.5
 }
 .myinput{
-    @apply w-full block p-2.5 border-2 border-black rounded-lg outline-0
+    @apply w-full block p-2.5 border border-black rounded-lg outline-0 my-2
 }
 
 
@@ -12,4 +12,10 @@
 }
 .mybtn{ 
     @apply w-[120px] h-[40px] bg-black text-white rounded-[7px] text-lg cursor-pointer;
+}
+.layout{
+    @apply max-w-[1240px] mx-auto px-2.5
+}
+.myform{
+    @apply w-full max-w-[500px] rounded-xl p-2.5 mx-auto shadow-lg
 }
