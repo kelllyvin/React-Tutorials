@@ -21,12 +21,18 @@ import Fecthuser from "./Components/Fecthuser";
 
 import Complexstate from "./Components/Complesstate";
 
-import Recipe from "./Components/Recipe";
+
 import Simpleforms from "./Components/Simpleforms";
+import Multipleform from "./Components/Multipleform";
+import Otherinputs from "./Components/Otherinputs";
+import Clion from "./Components/Clion";
+import Axiosexample from "./Components/Axiosexample";
+import Textdaisy from "./Components/Textdaisy";
+import Reactform from "./Components/Reactform";
 function App() {
   return (
     <>
-      <Simpleforms />
+      <Reactform />
     </>
   );
 }

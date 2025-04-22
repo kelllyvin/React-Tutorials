@@ -2,7 +2,7 @@ import { useState,useEffect } from "react"
 
 
 
-export const useFecth =(api)=>{
+export const useFecth = (api)=>{
     const[data,setData] = useState([]);
     const [isloading, setIsloading] = useState(true)
 
