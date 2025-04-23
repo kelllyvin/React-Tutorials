@@ -1,38 +1,38 @@
-import Navbar from "./Components/Navbar";
-import Fotter from "./Components/Footer";
-import Hero from "./Components/Hero";
-import Contact from "./Components/Contact";
-import Products from "./Components/Products";
-import Dynamic from "./Dynamic";
-import Props from "./Components/Props";
-import Jumiaclone from "./Components/Jumiaclone";
-import Simplelist from "./Components/Simplelist";
-import Complexlist from "./Components/Complexlist";
-import Mystore from "./Components/Mystore";
-import Lastviwed from "./Components/Lastviwed";
-import Propschildren from "./Propschildren";
-import Eventhandeling from "../Eventhandeling";
-import Conditionalrendring from "./Components/Conditionalrendring";
-import Simplestate from "./Components/Simplestate";
-import User from "./Components/User";
-import Switch from "./Components/switch";
-import Getauthors from "./Components/Getauthors";
-import Fecthuser from "./Components/Fecthuser";
-
-import Complexstate from "./Components/Complesstate";
+import "./App.css"
+import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Store from "./Pages/Store";
+import Header from "./Components/Header";
+import Footer from  "./Components/Footer"
+import Errorpage from "./Components/Errorpage";
+import Login from "./Pages/Login";
+import Timeline from "./Pages/Timeline";
+import Singletweet from "./Pages/Singletweet";
 
 
-import Simpleforms from "./Components/Simpleforms";
-import Multipleform from "./Components/Multipleform";
-import Otherinputs from "./Components/Otherinputs";
-import Clion from "./Components/Clion";
-import Axiosexample from "./Components/Axiosexample";
-import Textdaisy from "./Components/Textdaisy";
-import Reactform from "./Components/Reactform";
 function App() {
   return (
     <>
-      <Reactform />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/homepage" element={<Navigate to="/" />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/about us" element={<Navigate to="/about" />} />
+
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Store" element={<Store />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Timeline" element={<Timeline />} />
+          <Route path="/timeline/:id" element={<Singletweet />} />
+
+          <Route path="*" element={<Errorpage />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

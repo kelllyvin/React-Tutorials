@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useState } from 'react';
 
 
 // react hook from first ting is to import use from, second you register use form handel submit 
@@ -22,10 +23,23 @@ const validationSchema = yup.object().shape({
 
 
 const Reactform = () => {
-    const {register,handleSubmit, formState: {errors} } = useForm({resolver:yupResolver(validationSchema)})
+    const {register,handleSubmit, formState: {errors},reset 
+  } = useForm({resolver:yupResolver(validationSchema)})
+
+  const [isSubmitting, setisSubmitting] =useState(false)
 
     const handleformsubmit =(data) =>{
-        console.log(data);
+      setisSubmitting(true)
+       
+      setTimeout(()=>{
+console.log(data);
+    setisSubmitting(false)
+          reset();
+       
+      },   5000)
+
+        
+      
         
     }
 
@@ -78,7 +92,8 @@ const Reactform = () => {
         />
 
         <button type="submit" className="btn btn-accent w-full mt-2.5">
-          Submit
+          {isSubmitting ? "Submitting...": "Submit"}
+          
         </button>
       </form>
     </div>
