@@ -10,6 +10,7 @@ import Errorpage from "./Components/Errorpage";
 import Login from "./Pages/Login";
 import Timeline from "./Pages/Timeline";
 import Singletweet from "./Pages/Singletweet";
+import DashboardLayout from "./Pages/DashboardLayout";
 
 
 function App() {
@@ -28,6 +29,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/timeline/:id" element={<Singletweet />} />
+          <Route path ="/dashboard" element={<DashboardLayout />} >
+              {/*Children for our Dashboard wil; be h
+            heare  */}
+           <Route index element ={<h1> Home Dashbord</h1>}/>
+           <Route path="trash" element={<h1>Trash Side</h1>}/>
+           <Route path="spam" element ={<h1>Spam side</h1>}/>
+           </Route>
+         
+          
 
           <Route path="*" element={<Errorpage />} />
         </Routes>
