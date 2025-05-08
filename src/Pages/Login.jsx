@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { AppContext } from '../context';
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 import *  as yup from "yup"
 import { Navigate, redirect, useNavigate } from 'react-router-dom';
+import { useAppContext } from '../Hooks/useAppcontext';
 
 
 const loginFormValidator =yup.object().shape({
@@ -17,6 +19,9 @@ const loginFormValidator =yup.object().shape({
 
 
 const Login = () => {
+
+  const{value2} = useAppContext(AppContext)
+
     const {register,handleSubmit,
          formState: {errors},
     } =useForm({
@@ -40,7 +45,7 @@ const Login = () => {
   return (
     <div>
         <form onSubmit={handleSubmit(onLogin)}className='myform shadow-2xl'>
-            <h1 className='text-2xl'>Login to continue</h1>
+            <h1 className='text-2xl'>Login to continue {value2}</h1>
             <input type="text" className='input mt-2 w-full'
             placeholder='Email Address' 
             {...register("email")}

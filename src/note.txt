@@ -3,3 +3,17 @@ const lastViewedproduct =[
     {id,image, price}
 ]
 use the Mystoresingleproduct componet
+
+
+a global ststmenet is used to store content for all ur componets 
+
+it also gives ue acces to a content provider  allowin us to disburse differnt values
+it has to surround all our apps
+ note splittin 
+ Suspense compo and a lazy func
+ instead of usin 
+ import home from " ../page"
+ we use import home from lazy()
+ <suspense 
+
+ Animation animate in scrtool
